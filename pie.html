@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Methods of Execution Pie Charts</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Favicon Error workaround -->
+    <link rel="shortcut icon" href="#" />
+    <style>
+            .jumbotron {
+                text-align: center;
+            }
+        </style>
+</head>
+<body>
+        <div class="container">
+                <div class="jumbotron">
+                    <h1>Methods of Execution : State Samples </h1>
+                    <h3>Five Methods of execution have been utilized in the U.S. since 1976</h3>
+                </div>
+         
+<br>
+    <select id="selDataset" onchange="getData(this.value)">
+        <option value="dataset1">Total</option>
+        <option value="dataset2">Mississippi</option>
+        <option value="dataset3">Florida</option>
+    </select>
+    <div id="pie"></div>
+    <script src="static/js/logic.js"></script>
+
+</body>
+</html>
