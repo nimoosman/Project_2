@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <link rel="shortcut icon" href="#" />
+  <style>
+        .jumbotron {
+            text-align: center;
+        }
+    </style>
+  <title>Chart.JS Totals</title>
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/heroic-features.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-link-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="figures.html"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-linked="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    <!-- Navbar -->
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="map.html">Chorpleth Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="chart_js_library.html">Total Bar Chart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="adjustedchartjs.html">Adjusted Bar Chart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pie.html">Methods Pie Chart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="table.html">HTML Table</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="figures.html">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+      <!-- Page Content -->
+        <div class="container">
+                <div class="jumbotron">
+                    <h1>Horizontal Bar Chart using Chart.js</h1>
+                    <h3>These are the total figures for the five states with the highest number of executions</h3>
+                </div>
+  <div class="container">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script>
+    let myChart = document.getElementById('myChart').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let exoChart = new Chart(myChart, {
+      type:'horizontalBar', 
+      data:{
+        labels:['Texas', 'Oklahoma', 'Virginia', 'Florida', 'Missouri'],
+        datasets:[{
+          label:'Total # Executions',
+          data:[
+            538,
+            112,
+            111,
+            92,
+            87
+          ],
+
+          //backgroundColor:'green',
+          backgroundColor:[
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(255, 99, 132, 0.6)'
+          ],
+          borderWidth:1,
+          borderColor:'#777',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000'
+        }]
+      },
+      
+      options:{
+        title:{
+          display:true,
+          text:'Total Executions',
+          fontSize:25
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="py-2 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Group 4 2019</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+  
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  </body>
+  
+  </html>

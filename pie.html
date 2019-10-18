@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Methods of Execution Pie Charts</title>
+    <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/heroic-features.css" rel="stylesheet">
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Favicon Error workaround -->
+    <link rel="shortcut icon" href="#" />
+    <style>
+            .jumbotron {
+                text-align: center;
+            }
+        </style>
+</head>
+<body>
+     <!-- Navigation -->
+  <nav class="navbar navbar-link-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="figures.html"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-linked="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    <!-- Navbar -->
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="map.html">Chorpleth Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="chart_js_library.html">Total Bar Chart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="adjustedchartjs.html">Adjusted Bar Chart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pie.html">Methods Pie Chart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="table.html">HTML Table</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="figures.html">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+        <div class="container">
+                <div class="jumbotron">
+                    <h1>Methods of Execution : State Samples </h1>
+                    <h3>Five Methods of execution have been utilized in the U.S. since 1976</h3>
+                </div>
+         
+<br>
+    <select id="selDataset" onchange="getData(this.value)">
+        <option value="dataset1">Total</option>
+        <option value="dataset2">Mississippi</option>
+        <option value="dataset3">Florida</option>
+    </select>
+    <div id="pie"></div>
+    <script src="static/js/logic.js"></script>
+
+  
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+
+</body>
+</html>
